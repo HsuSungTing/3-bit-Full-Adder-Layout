@@ -1,0 +1,169 @@
+ ****** HSPICE -- Q-2020.03 linux64 (Mar  8 2020) ******                        
+  Copyright (c) 1986 - 2023 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: HW4_test.sp                                                       
+  Command line options: /usr/cad/synopsys/hspice/cur/hspice/linux64/hspice HW4_test.sp -o HW4_test.lis
+  Start time: Sun Dec 17 14:10:12 2023
+ lic:  
+ lic: FLEXlm: SDK_12.6 
+ lic: USER:   110501521            HOSTNAME: ares-athena 
+ lic: HOSTID: "e61f13c2e205"       PID:      10599 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lshc 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 31-mar-2024/2023.03 
+ lic: 252(in_use)/900(total) FLOATING license(s) on SERVER 26585@lshc 
+ lic:   
+  **warning** (HW4_test.sp:6) runlvl smaller than 5, reset to 5 when accurate turned on
+  **warning** Global net name "vdd" in subckt pin list. The pin will be connected to the local net. Recommend to not use global net names in subckt pin lists.
+
+ **warning**  runlvl smaller than 5, reset to 5 when accurate turned on
+1****** HSPICE -- Q-2020.03 linux64 (Mar  8 2020) ******                        
+ ******  
+ .title ripplecarryadder
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+  **info** (HW4_test.sp:65) DC voltage reset to initial transient source value in source 0:vc0. new dc=0.0000D+00
+ 
+
+             
+ Summary of Linear Res Distribution Info
+ ---------------------------------------
+ |Range          |Total     |Percent(%)|
+ |---------------+----------+----------|
+ |1e-04  ~  1e-03|15        |0.6170    |
+ |1e-03  ~  1e-02|44        |1.8100    |
+ |1e-02  ~  1e-01|495       |20.3620   |
+ |1e-01  ~  1e+00|497       |20.4443   |
+ |1e+00  ~  1e+03|1380      |56.7668   |
+ ---------------------------------------
+              
+             
+ Summary of Linear Cap Distribution Info
+ ---------------------------------------
+ |Range          |Total     |Percent(%)|
+ |---------------+----------+----------|
+ |1e-22  ~  1e-21|12        |1.3187    |
+ |1e-20  ~  1e-19|2         |0.2198    |
+ |1e-19  ~  1e-18|6         |0.6593    |
+ |1e-18  ~  1e-17|65        |7.1429    |
+ |1e-17  ~  1e-16|274       |30.1099   |
+ |1e-16  ~  1e-15|533       |58.5714   |
+ |1e-15  ~  1e-14|18        |1.9780    |
+ ---------------------------------------
+              
+             
+ Summary of Detailed RC Type Statistics
+ -------------------------
+ |Element Type|Number    |
+ |------------+----------|
+ |Constant Res|2431      |
+ |            |          |
+ |Constant Cap|910       |
+ -------------------------
+              
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 5         bypass  = 2.0000    
+  Opening plot unit= 15
+ file=HW4_test.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ .title ripplecarryadder
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is voltage   simulation time is     0.     
+     node    =voltage       node    =voltage       node    =voltage
+
+ + 0:c0      =   0.       0:cout    =   9.6822n  0:s0      =  41.6631n
+ + 0:s1      =  42.2460n  0:s2      =  42.2481n  0:vdd     =   1.3000 
+ + 0:vss     =   0.       0:x0      =   0.       0:x1      =   0.     
+ + 0:x2      =   0.       0:y0      =   0.       0:y1      =   0.     
+ + 0:y2      =   0.     
+
+
+ maximum nodal capacitance=   1.178E-13         on node     1:n_vss_m0_b      
+
+    nodal  capacitance table 
+
+     node    =    cap       node    =    cap       node    =    cap
+
+ + 0:c0      =   0.       0:cout    = 426.5560a  0:s0      = 641.4320a
+ + 0:s1      = 651.9640a  0:s2      = 651.9640a  0:vdd     =   0.     
+ + 0:vss     =   0.       0:x0      =   0.       0:x1      =   0.     
+ + 0:x2      =   0.       0:y0      = 239.2500a  0:y1      = 239.2500a
+ + 0:y2      = 239.2500a
+
+ 
+ ******
+ .title ripplecarryadder
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ pwr=  33.0555u  from=   0.             to=  50.0000n
+
+          ***** job concluded
+ ******  
+ .title ripplecarryadder
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+ cpu MHz	: 1596.000
+  
+ OS:
+ Linux version 2.6.32-696.30.1.el6.x86_64 (mockbuild@c1bl.rdu2.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-18) (GCC) ) #1 SMP Tue May 22 03:28:18 UTC 2018
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    16
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =    2584 # elements   =    3476
+  # resistors   =    2431 # capacitors =     910 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       9
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =     126 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.06           1          48
+  transient          2.17        5001        3295        1220 rev=       124
+  readin             0.08
+  errchk             0.02
+  setup              0.09
+  output             0.00
+
+
+           peak memory used        368.50 megabytes
+           total cpu time            2.42 seconds
+           total elapsed time        2.60 seconds
+           job started at     14:10:12 12/17/2023
+           job ended   at     14:10:15 12/17/2023
+           job total runtime         2.60 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.18(s)
